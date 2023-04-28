@@ -6,6 +6,9 @@ const app = express()
 app.get('/' ,(req,res)=>{
     res.send('This home page')
 })
+app.get('/user/:username/:id' ,(req,res)=>{
+    res.send(`User id:${req.params.id},Username: ${req.params.username}`)
+})
 app.get('/about' ,(req,res)=>{
     res.send('About')
 })
