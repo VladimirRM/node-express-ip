@@ -9,10 +9,11 @@ app.get('/' ,(req,res)=>{
     res.render('index')
 })
 app.get('/about' ,(req,res)=>{
-    res.send('about')
+    res.render('about')
 })
 app.get('/user/:username/' ,(req,res)=>{
-    res.send('user')
+    let data = {username: req.params.username, hobbies:['Football','Basketball','Skate']}
+    res.render('user',data)
 })
 
 
